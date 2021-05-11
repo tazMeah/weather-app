@@ -1,24 +1,22 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Header from "./components/Header";
+import Form from "./components/Form";
+import Result from "./components/Result";
 
 function App() {
+
+  const api = {
+    key : "c75be72de3dc82042431f27ccbf29521",
+    url : "api.openweathermap.org/data/2.5/weather?q="
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header/>
+      <Form/>
+      <Result/>
     </div>
   );
 }
