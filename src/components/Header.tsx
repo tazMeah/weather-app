@@ -1,8 +1,11 @@
 import React from "react";
+import "./Header.css";
 
 function Header () {
     return (
-        <h1>Weather</h1>
+        <header>
+            <h1>Weather</h1>
+        </header>
     )
 }
 

@@ -1,11 +1,17 @@
 import React from "react";
+import { isPropertySignature } from "typescript";
+import "./Form.css";
+
 
 function Form () {
     return(
-        <form>
-            <label>City</label>
-            <input type="text"></input>
-        </form>
+        <div id="formContainer">
+            <form>
+                <label>City</label>
+                <input type="text" placeholder="Enter a city..."></input>
+                <button>Search</button>
+            </form>
+        </div>
     )
 }
 
