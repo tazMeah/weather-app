@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
+import Header from "./components/Header";
+import Form from "./components/Form";
 
 function App() {
 
@@ -37,15 +39,9 @@ function App() {
 
   return (
     <div className="App">
-      <header>
-        <h1>Weather</h1>
-      </header>
+      <Header/>
       <main>
-        <form>
-          <label>City: </label>
-          <input type="text" placeholder="Enter your city..." ></input>
-          <button type="button" onClick={getCity}>Search</button>
-        </form>
+        <Form getCity={getCity}/>
         <h2>{city}</h2>
         <p>Current Temp: {temp}</p>
         <p>Feels Like: {feels}</p>
