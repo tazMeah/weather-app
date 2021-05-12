@@ -3,7 +3,16 @@ import { isPropertySignature } from "typescript";
 import "./Form.css";
 
 
-function Form () {
+function Form (props:any) {
+    
+
+    // useEffect will fetch the data once when the form renders.
+    
+
+    // fetch again when the button is clicked.
+
+    
+
     return(
         <div id="formContainer">
             <form>
