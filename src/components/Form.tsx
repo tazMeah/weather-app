@@ -1,15 +1,16 @@
-import React from "react";
-import { isPropertySignature } from "typescript";
+import React, {useState} from "react";
+import Result from "./Result";
 import "./Form.css";
 
 
 function Form (props:any) {
     
+   
 
-    // useEffect will fetch the data once when the form renders.
+    const [cityName, setCityName]  = useState([]);
     
 
-    // fetch again when the button is clicked.
+     
 
     
 
@@ -20,6 +21,7 @@ function Form (props:any) {
                 <input type="text" placeholder="Enter a city..."></input>
                 <button>Search</button>
             </form>
+            <Result/>
         </div>
     )
 }

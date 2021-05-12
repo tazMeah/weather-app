@@ -1,23 +1,24 @@
 import React, { useState, useEffect } from "react";
-// import getWeather from "../weatherApi";
+import WeatherApi from "./WeatherApi";
 import "./Result.css";
 
-function Result() {
+function Result(props : any) {
 
-    // to alter the state, initial state is empty
-    const [weather, setWeather] = useState([]);
+    // // to alter the state, initial state is empty
+    // let [weather, setWeather] = useState([]);
+
 
     
-    useEffect(() => {
-        // API call goes here.
-        fetch("https://api.openweathermap.org/data/2.5/weather?q=detroit&appid=c75be72de3dc82042431f27ccbf29521&units=imperial")
-            .then(res => res.json())
-            // .then(result => result)
-            .then(result => setWeather(result))
-            .then(function(){
-                console.log(weather)
-            })
-    }, []);
+    // useEffect(() => {
+    //     // API call goes here.
+    //     fetch("https://api.openweathermap.org/data/2.5/weather?q=detroit&appid=c75be72de3dc82042431f27ccbf29521&units=imperial")
+    //         .then(res => res.json())
+    //         // .then(result => result)
+    //         .then(result => setWeather(result))
+    //         .then(function(){
+    //             console.log(weather) // returning an object for Detroit's weather
+    //         })
+    // }, []);
 
 
 
@@ -30,19 +31,10 @@ function Result() {
 
 
 
-
-
-
-
-
     return (
         <div id="result">
 
-            <h1></h1>
-            <p>Description:</p>
-            <p>Current Temp:</p>
-            <p>Feels Like:</p>
-            <p>Wind Speed:</p>
+            <WeatherApi cityName={props.cityName}/>
 
         </div>
     )
